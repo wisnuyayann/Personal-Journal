@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery — Personal Journal</title>
+  <meta name="description" content="Galeri foto dengan grid dan lightbox." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Lewati ke konten</a>
+
+  <header class="site-header" data-sticky>
+    <nav class="nav container" aria-label="Navigasi utama">
+      <a class="brand" href="index.html"><span class="brand-mark">◼</span><span class="brand-text">Personal Journal</span></a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-label="Buka menu"><span aria-hidden="true">☰</span></button>
+      <div class="nav-links" data-nav-links>
+        <a href="about.html">About</a>
+        <a href="travel.html">Travel</a>
+        <a href="writing.html">Writing</a>
+        <a class="active" href="gallery.html" aria-current="page">Gallery</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode">
+          <span data-theme-icon aria-hidden="true">☾</span><span class="theme-label">Theme</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="container page">
+    <header class="page-head">
+      <h1>Photo Gallery</h1>
+      <p class="muted">Klik foto untuk membesar (lightbox). Tanpa library.</p>
+    </header>
+
+    <section class="section">
+      <div class="photo-grid" id="gallery-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" data-lightbox hidden>
+    <div class="lightbox-backdrop" data-lightbox-close aria-hidden="true"></div>
+    <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Preview foto">
+      <button class="icon-btn" type="button" data-lightbox-close aria-label="Tutup">✕</button>
+      <img data-lightbox-img alt="" loading="lazy" />
+      <p class="muted" data-lightbox-caption></p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <p>© <span data-year></span> Personal Journal. All rights reserved.</p>
+      <a class="muted" href="#main" data-smooth-scroll>Back to top</a>
+    </div>
+  </footer>
+
+  <script defer src="assets/js/main.js"></script>
+</body>
+</html>
